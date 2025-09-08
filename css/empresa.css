@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Fondo */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/fondo1.jpg") no-repeat center center/cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+/* Menú */
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+nav ul li.left {
+  left: 20px;
+}
+
+nav ul li.right {
+  right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Submenú */
+.submenu {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.submenu li {
+  position: static;
+  transform: none;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* Contenido principal */
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+article h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #ffcc00;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #ccc;
+}

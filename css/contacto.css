@@ -1,0 +1,149 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* evita scroll innecesario */
+    background: #fff;
+    color: #222;
+    line-height: 1.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header sin líneas ni bordes, con logo a la izquierda y título centrado */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra el h1 */
+    position: relative; /* para posicionar logo */
+    margin-bottom: 30px;
+    height: 60px;
+}
+
+/* Logo a la izquierda, posición absoluta para no afectar el centrado del h1 */
+header a.logo-link {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header a.logo-link img {
+    height: 50px;
+    display: block;
+}
+
+header h1 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 auto;
+}
+
+/* Contenedor principal */
+main.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+/* Foto de la líder */
+.foto-lider {
+    flex: 1 1 45%;
+    max-width: 40%;
+}
+
+.foto-lider img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Información de la líder */
+.info-lider {
+    flex: 1 1 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-lider h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.info-lider p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.info-lider p.descripcion {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+.info-lider strong {
+    color: #333;
+}
+
+/* Redes sociales */
+.redes {
+    margin-top: 15px;
+}
+
+.redes a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.redes a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    border-top: none; /* sin línea */
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    main.contact-container {
+        flex-direction: column;
+    }
+    .foto-lider, .info-lider {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .foto-lider {
+        margin-bottom: 25px;
+    }
+}
