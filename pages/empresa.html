@@ -10,26 +10,33 @@
   <!-- Fondo -->
   <div class="background"></div>
 
-  <!-- Menú lateral -->
-  <header>
-    <nav>
-      <ul>
-        <li class="left">
-          <a href="../index.html" class="logo-link">
-            <img src="../img/logo.png" alt="Frida Escobedo Studio" />
-          </a>
-          <div class="menu-section">
-            <a href="#trabajos">Trabajos</a>
-            <ul class="submenu">
-              <li><a href="#proyectos">Proyectos terminados</a></li>
-              <li><a href="#objetos">Objetos</a></li>
-              <li><a href="#publicaciones">Publicaciones</a></li>
-            </ul>
+  <!-- Menú superior -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <img src="../img/logo.png" alt="Frida Escobedo Studio" class="logo">
+        </a>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <div class="nav-item dropdown">
+          <a href="#trabajos" class="nav-link dropdown-toggle">Trabajos</a>
+          <div class="dropdown-content">
+            <a href="#proyectos">Proyectos Terminados</a>
+            <a href="#objetos">Objetos</a>
+            <a href="#publicaciones">Publicaciones</a>
           </div>
-        </li>
-        <li class="right"><a href="#apariciones">Apariciones</a></li>
-      </ul>
-    </nav>
+        </div>
+        <div class="nav-item">
+          <a href="#apariciones" class="nav-link">Apariciones</a>
+        </div>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
   </header>
 
   <!-- Contenido principal -->
@@ -137,25 +144,25 @@
           </div>
         </div>
       </article>
-    </section>
 
-    <!-- Proyectos en progreso -->
-    <section id="en-progreso">
-      <h2>Proyectos en progreso</h2>
-      <div class="progress-grid">
-        <div class="progress-item">
-          <h4>Bergen Brooklyn</h4>
+      <!-- Proyectos en progreso -->
+      <article id="en-progreso">
+        <h3>En progreso</h3>
+        <div class="progress-grid">
+          <div class="progress-item">
+            <h4>Bergen Brooklyn</h4>
+          </div>
+          <div class="progress-item">
+            <h4>Centre Pompidou 2030</h4>
+          </div>
+          <div class="progress-item">
+            <h4>Oscar L. Tang and H.M. Agnes Hsu-Tang Wing for Modern and Contemporary Art —The Metropolitan Museum of Art</h4>
+          </div>
+          <div class="progress-item">
+            <h4>Ray Harlem</h4>
+          </div>
         </div>
-        <div class="progress-item">
-          <h4>Centre Pompidou 2030</h4>
-        </div>
-        <div class="progress-item">
-          <h4>Oscar L. Tang and H.M. Agnes Hsu-Tang Wing for Modern and Contemporary Art —The Metropolitan Museum of Art</h4>
-        </div>
-        <div class="progress-item">
-          <h4>Ray Harlem</h4>
-        </div>
-      </div>
+      </article>
     </section>
 
     <!-- Apariciones -->
@@ -185,5 +192,33 @@
   <footer>
     <p>© 2025 Frida Escobedo Studio. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    // Script para el menú hamburguesa y navegación suave
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+          hamburger.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+      }
+
+      // Smooth scrolling para enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
