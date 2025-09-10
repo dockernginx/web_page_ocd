@@ -12,7 +12,7 @@
 body, html {
   width: 100%;
   height: 100%;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   overflow-x: hidden;
 }
@@ -341,11 +341,11 @@ footer {
   width: 50%;
 }
 .intro-text{
-  text-align: center;
+  text-align: left;
   width: 50%;
 }
 .vision-mision-container{
-  text-align: center;
+  text-align: left;
 }
 .vision-section h2{
   font-size: 1.5rem;
@@ -367,11 +367,27 @@ footer {
   width: 50%;
 }
 .mision-section p{
- text-align: justify;
+ text-align: left;
 }
 .content-block{
-  text-align: center;
+  text-align: left;
   width: 50%;
+}
+
+
+
+/* manifestacion */
+.manifiesto-section{
+  text-align: left;
+}
+.manifiesto-grid{
+
+}
+
+.manifiesto-item{
+ text-align: left;
+ width: 50%;
+ padding: 10px 0px  10px 0px;
 }
 /*Carrusel de imagenes de equipo de trabajo y lugra de trabajo*/
 .equipo-section {
