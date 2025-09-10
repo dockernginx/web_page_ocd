@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+    font-family: Helvetica;
+    src: url('../fonts/HelveticaLTStdBold.otf'), url('../fonts/HelveticaLTStdRoman.otf');
+}
 
 body, html {
   width: 100%;
@@ -254,6 +258,7 @@ footer {
     box-shadow: 0 10px 27px rgba(0,0,0,0.3);
     padding: 20px 0;
     gap: 0;
+    backdrop-filter: blur(10px);
   }
 
   .nav-menu.active {
@@ -322,3 +327,122 @@ footer {
     font-size: 0.95rem;
   }
 }
+/*Vision , Mision, Manifiesto */
+.intro-section{
+  text-align: left;
+}
+.intro-content h2{
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #fff;
+  width: 50%;
+}
+.intro-text{
+  text-align: center;
+  width: 50%;
+}
+.vision-mision-container{
+  text-align: center;
+}
+.vision-section h2{
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #fff;
+  width: 50%;
+}
+
+.mision-section h2{
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #fff;
+  width: 50%;
+}
+.mision-section p{
+ text-align: justify;
+}
+.content-block{
+  text-align: center;
+  width: 50%;
+}
+/*Carrusel de imagenes de equipo de trabajo y lugra de trabajo*/
+.equipo-section {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.equipo-section {
+    text-align: center;
+    margin: 50px auto;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    position: relative;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 400px; /* ✅ Altura fija */
+    object-fit: cover; /* ✅ Mantiene proporción sin deformar */
+    border-radius: 15px;
+    display: block;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    max-width: 80%;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .carousel-btn {
+   background: rgba(0,0,0,0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(0,0,0,0.9);
+  }
