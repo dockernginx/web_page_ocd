@@ -61,50 +61,18 @@ body, html {
 .nav-link {
   text-decoration: none;
   color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding: 10px 0;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
   font-size: 1rem;
+  border-radius: 4px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .nav-link:hover {
   color: #ffcc00;
-}
-
-/* Dropdown Menu */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(0, 0, 0, 0.95);
-  min-width: 220px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  border-radius: 4px;
-  padding: 10px 0;
-  border: 1px solid rgba(255, 204, 0, 0.3);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 12px 20px;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.dropdown-content a:hover {
-  background: rgba(255, 204, 0, 0.2);
-  color: #ffcc00;
+  background: rgba(255, 204, 0, 0.1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 /* Hamburger Menu */
@@ -138,7 +106,7 @@ body, html {
 main {
   margin-top: 80px;
   text-align: center;
-  max-width: 1000px;
+  max-width: 1400px;
   padding: 40px 20px;
   margin-left: auto;
   margin-right: auto;
@@ -151,17 +119,31 @@ main h1 {
   margin-bottom: 40px;
 }
 
+/* Layout de tres columnas */
+.three-column-layout {
+  display: flex;
+  gap: 30px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  min-height: 60vh;
+}
+
+/* Estilos generales para secciones */
 section {
   margin-bottom: 40px;
-  text-align: left;
 }
 
 section h2 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-bottom: 2px solid #ffcc00;
   display: inline-block;
   padding-bottom: 5px;
+  color: #fff;
 }
 
 article {
@@ -174,23 +156,15 @@ article h3 {
   color: #ffcc00;
 }
 
-/* Grids para los contenidos */
-.proyectos-grid,
-.objetos-grid,
-.publicaciones-grid,
-.progress-grid,
-.apariciones-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Grid para items */
+.items-grid {
+  display: flex;
+  flex-direction: column;
   gap: 15px;
-  margin-top: 15px;
 }
 
-.proyecto-item,
-.objeto-item,
-.publicacion-item,
-.progress-item,
-.aparicion-item {
+/* Estilos para items individuales */
+.item {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   padding: 15px;
@@ -199,11 +173,7 @@ article h3 {
   transition: all 0.3s ease;
 }
 
-.proyecto-item:hover,
-.objeto-item:hover,
-.publicacion-item:hover,
-.progress-item:hover,
-.aparicion-item:hover {
+.item:hover {
   background: rgba(255, 204, 0, 0.2);
   border-color: #ffcc00;
   transform: translateY(-2px);
@@ -220,25 +190,24 @@ article h3 {
   margin-bottom: 8px;
 }
 
-.proyecto-item h4,
-.objeto-item h4,
-.publicacion-item h4,
-.progress-item h4,
-.aparicion-item h4 {
+.item h4 {
   font-size: 1rem;
   margin-bottom: 5px;
   color: #fff;
+  line-height: 1.3;
 }
 
 .aparicion-item p {
   font-size: 0.9rem;
   color: #ccc;
   margin-top: 8px;
+  line-height: 1.4;
 }
 
 #apariciones p {
   margin-bottom: 20px;
   line-height: 1.6;
+  color: #ddd;
 }
 
 /* Scrollbar personalizada */
@@ -280,13 +249,14 @@ footer {
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.9);
     width: 100%;
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0,0,0,0.3);
     padding: 20px 0;
     gap: 0;
+    backdrop-filter: blur(10px);
   }
 
   .nav-menu.active {
@@ -298,35 +268,60 @@ footer {
     width: 100%;
   }
 
-  .dropdown-content {
-    position: static;
+  .nav-link {
     display: block;
-    box-shadow: none;
-    background: rgba(255, 204, 0, 0.1);
-    margin-top: 10px;
-    border: none;
+    padding: 15px 20px;
   }
 
   main {
-    max-width: 90%;
+    max-width: 95%;
     padding: 20px 15px;
     max-height: calc(100vh - 140px);
   }
   
   main h1 {
     font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  /* Layout responsive: columnas apiladas */
+  .three-column-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .column {
+    min-height: auto;
   }
   
   section h2 {
     font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .items-grid {
+    gap: 12px;
+  }
+
+  .item {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .three-column-layout {
+    gap: 20px;
   }
   
-  .proyectos-grid,
-  .objetos-grid,
-  .publicaciones-grid,
-  .progress-grid,
-  .apariciones-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  main {
+    max-width: 95%;
+  }
+  
+  section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .item h4 {
+    font-size: 0.95rem;
   }
 }
