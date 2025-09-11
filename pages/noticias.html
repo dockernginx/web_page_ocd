@@ -4,55 +4,224 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Noticias - Proyecto OCD</title>
-  <link rel="stylesheet" href="../css/noticias.css" />
+  <link rel="stylesheet" href="../css/empresa.css" />
 </head>
 <body>
-  <header>
-    <a href="../index.html" class="logo-link" aria-label="Regresar al inicio">
-      <img src="../img/logo.png" alt="Logo Proyecto OCD" />
-    </a>
+  <!-- Fondo -->
+  <div class="background"></div>
+
+  <!-- Navbar superior -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html" aria-label="Regresar al inicio">
+          <img src="../img/logo.png" alt="Logo Proyecto OCD" class="logo" />
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="empresa.html" class="nav-link">Empresa</a>
+        </li>
+        <li class="nav-item">
+          <a href="noticias.html" class="nav-link" style="color: #ffcc00;">Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main>
     <h1>Proyectos en Proceso</h1>
-  </header>
-  <main class="proyectos-container">
-    <article class="proyecto">
-      <img src="../img/fondo1.jpg" alt="Proyecto 1" />
-      <div class="info-proyecto">
-        <h2>Proyecto Residencial Aurora</h2>
-        <p>Desarrollo de un complejo habitacional sostenible con diseño moderno y espacios verdes integrados.</p>
-      </div>
-    </article>
-    <article class="proyecto">
-      <img src="../img/fondo2.jpg" alt="Proyecto 2" />
-      <div class="info-proyecto">
-        <h2>Centro Cultural La Plaza</h2>
-        <p>Construcción de un espacio cultural multifuncional para eventos, exposiciones y talleres comunitarios.</p>
-      </div>
-    </article>
-    <article class="proyecto">
-      <img src="../img/fondo3.jpg" alt="Proyecto 3" />
-      <div class="info-proyecto">
-        <h2>Oficinas EcoTech</h2>
-        <p>Edificio corporativo con certificación LEED, enfocado en eficiencia energética y bienestar laboral.</p>
-      </div>
-    </article>
-    <article class="proyecto">
-      <img src="../img/fondo4.jpg" alt="Proyecto 4" />
-      <div class="info-proyecto">
-        <h2>Parque Urbano Verde</h2>
-        <p>Diseño y construcción de un parque público con áreas recreativas y senderos ecológicos.</p>
-      </div>
-    </article>
-    <article class="proyecto">
-      <img src="../img/fondo5.jpg" alt="Proyecto 5" />
-      <div class="info-proyecto">
-        <h2>Hospital San Miguel</h2>
-        <p>Ampliación y modernización de instalaciones hospitalarias con tecnología de punta.</p>
-      </div>
-    </article>
-    <!-- Puedes agregar más proyectos usando fondo6.jpg hasta fondo10.jpg -->
+    
+    <div class="nosotros-container">
+      <!-- Sección introducción -->
+      <section class="intro-section">
+        <div class="intro-content">
+          <h2>Nuestros Proyectos Actuales</h2>
+          <p class="intro-text">
+            En Proyecto OCD nos enorgullecemos de trabajar en desarrollos innovadores que transforman espacios 
+            y mejoran la calidad de vida de las comunidades. Cada proyecto refleja nuestro compromiso con la 
+            excelencia, la sostenibilidad y el diseño funcional.
+          </p>
+        </div>
+      </section>
+
+      <!-- Grid de proyectos -->
+      <section class="manifiesto-section">
+        <h2>Proyectos Destacados</h2>
+        <div class="manifiesto-grid">
+          
+          <article class="manifiesto-item">
+            <h3>Proyecto Residencial Aurora</h3>
+            <p>
+              <strong>Estado:</strong> En construcción | <strong>Finalización:</strong> Q2 2025
+            </p>
+            <p>
+              Desarrollo de un complejo habitacional sostenible con diseño moderno y espacios verdes integrados. 
+              Este proyecto incorpora tecnologías de construcción ecológicas y sistemas de eficiencia energética 
+              para crear un ambiente de vida saludable y sustentable.
+            </p>
+            <div style="margin-top: 15px;">
+              <a href="#" class="nav-link" style="background: rgba(255, 204, 0, 0.2); padding: 8px 15px; border-radius: 6px; display: inline-block;">
+                Ver detalles →
+              </a>
+            </div>
+          </article>
+
+          <article class="manifiesto-item">
+            <h3>Centro Cultural La Plaza</h3>
+            <p>
+              <strong>Estado:</strong> Fase de diseño | <strong>Inicio:</strong> Marzo 2025
+            </p>
+            <p>
+              Construcción de un espacio cultural multifuncional para eventos, exposiciones y talleres comunitarios. 
+              El diseño contempla espacios flexibles que se adapten a diferentes tipos de actividades culturales 
+              y sociales, fortaleciendo el tejido comunitario.
+            </p>
+            <div style="margin-top: 15px;">
+              <a href="#" class="nav-link" style="background: rgba(255, 204, 0, 0.2); padding: 8px 15px; border-radius: 6px; display: inline-block;">
+                Ver detalles →
+              </a>
+            </div>
+          </article>
+
+          <article class="manifiesto-item">
+            <h3>Oficinas EcoTech</h3>
+            <p>
+              <strong>Estado:</strong> 75% completado | <strong>Finalización:</strong> Enero 2025
+            </p>
+            <p>
+              Edificio corporativo con certificación LEED, enfocado en eficiencia energética y bienestar laboral. 
+              Incluye sistemas de ventilación natural, paneles solares y espacios de trabajo colaborativo que 
+              promueven la productividad y el bienestar de los empleados.
+            </p>
+            <div style="margin-top: 15px;">
+              <a href="#" class="nav-link" style="background: rgba(255, 204, 0, 0.2); padding: 8px 15px; border-radius: 6px; display: inline-block;">
+                Ver detalles →
+              </a>
+            </div>
+          </article>
+
+          <article class="manifiesto-item">
+            <h3>Parque Urbano Verde</h3>
+            <p>
+              <strong>Estado:</strong> En planificación | <strong>Inicio proyectado:</strong> Mayo 2025
+            </p>
+            <p>
+              Diseño y construcción de un parque público con áreas recreativas y senderos ecológicos. 
+              El proyecto incluye zonas de juegos infantiles, espacios para ejercicio al aire libre y 
+              un sistema de recolección de agua pluvial para riego sustentable.
+            </p>
+            <div style="margin-top: 15px;">
+              <a href="#" class="nav-link" style="background: rgba(255, 204, 0, 0.2); padding: 8px 15px; border-radius: 6px; display: inline-block;">
+                Ver detalles →
+              </a>
+            </div>
+          </article>
+
+          <article class="manifiesto-item">
+            <h3>Hospital San Miguel</h3>
+            <p>
+              <strong>Estado:</strong> Fase inicial | <strong>Finalización:</strong> Diciembre 2025
+            </p>
+            <p>
+              Ampliación y modernización de instalaciones hospitalarias con tecnología de punta. 
+              El proyecto contempla nuevas salas de cirugía, áreas de cuidados intensivos y sistemas 
+              de automatización que mejoren la atención médica y la eficiencia operativa.
+            </p>
+            <div style="margin-top: 15px;">
+              <a href="#" class="nav-link" style="background: rgba(255, 204, 0, 0.2); padding: 8px 15px; border-radius: 6px; display: inline-block;">
+                Ver detalles →
+              </a>
+            </div>
+          </article>
+
+          <article class="manifiesto-item">
+            <h3>Complejo Educativo Innovación</h3>
+            <p>
+              <strong>Estado:</strong> En evaluación | <strong>Decisión:</strong> Febrero 2025
+            </p>
+            <p>
+              Desarrollo de instalaciones educativas modernas con laboratorios de ciencia y tecnología. 
+              El diseño priorizará espacios flexibles de aprendizaje, áreas verdes para actividades 
+              al aire libre y sistemas tecnológicos integrados para una educación del siglo XXI.
+            </p>
+            <div style="margin-top: 15px;">
+              <a href="#" class="nav-link" style="background: rgba(255, 204, 0, 0.2); padding: 8px 15px; border-radius: 6px; display: inline-block;">
+                Ver detalles →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Sección de noticias adicionales -->
+      <section class="vision-mision-container">
+        <div class="vision-section">
+          <h2>Últimas Actualizaciones</h2>
+          <div class="content-block">
+            <h3>Enero 2025</h3>
+            <p>
+              El proyecto Oficinas EcoTech ha alcanzado el 75% de avance. Se han instalado 
+              los paneles solares y el sistema de climatización eficiente.
+            </p>
+            <p>
+              Iniciamos la fase de acabados en el Proyecto Residencial Aurora, con fecha 
+              de entrega programada para el segundo trimestre del año.
+            </p>
+          </div>
+        </div>
+        
+        <div class="mision-section">
+          <h2>Próximos Hitos</h2>
+          <div class="content-block">
+            <h3>Q1 2025</h3>
+            <p>
+              Finalización del edificio EcoTech y entrega oficial a nuestros clientes. 
+              Inicio de la fase de construcción del Centro Cultural La Plaza.
+            </p>
+            <p>
+              Evaluación final del Complejo Educativo Innovación y definición del 
+              cronograma de ejecución para el proyecto.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <!-- Footer -->
   <footer>
     <div>© 2025 Proyecto OCD. Todos los derechos reservados.</div>
   </footer>
+
+  <script>
+    // JavaScript para el menú hamburguesa (reutilizado del diseño original)
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }));
+  </script>
 </body>
 </html>
