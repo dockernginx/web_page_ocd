@@ -327,138 +327,402 @@ footer {
     font-size: 0.95rem;
   }
 }
-/*Vision , Mision, Manifiesto */
-.intro-section{
+
+/* ===================================================================
+   ESTILOS ESPECÍFICOS PARA PÁGINA NOSOTROS
+   ================================================================== */
+
+/* Container principal de nosotros */
+.nosotros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === INTRODUCCIÓN EXTERIORISMO === */
+.intro-section {
+  margin-bottom: 60px;
   text-align: left;
 }
-.intro-content h2{
-  font-size: 1.5rem;
+
+.intro-content {
+  max-width: 800px;
+}
+
+.intro-content h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 8px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e8e8e8;
+  margin-top: 20px;
+}
+
+/* === VISIÓN Y MISIÓN === */
+.vision-mision-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.vision-section,
+.mision-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.vision-section:hover,
+.mision-section:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 204, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.vision-section h2,
+.mision-section h2 {
+  font-size: 1.6rem;
   margin-bottom: 25px;
   border-bottom: 2px solid #ffcc00;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   color: #fff;
-  width: 50%;
+  width: 100%;
 }
-.intro-text{
+
+.content-block {
+  width: 100%;
+}
+
+.content-block h3 {
+  font-size: 1.3rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.content-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.content-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* === MANIFIESTO === */
+.manifiesto-section {
+  margin-bottom: 60px;
   text-align: left;
-  width: 50%;
 }
-.vision-mision-container{
-  text-align: left;
-}
-.vision-section h2{
-  font-size: 1.5rem;
-  margin-bottom: 25px;
-  border-bottom: 2px solid #ffcc00;
+
+.manifiesto-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #ffcc00;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   color: #fff;
-  width: 50%;
+  font-weight: 700;
 }
 
-.mision-section h2{
-  font-size: 1.5rem;
-  margin-bottom: 25px;
-  border-bottom: 2px solid #ffcc00;
-  display: inline-block;
-  padding-bottom: 5px;
+.manifiesto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+}
+
+.manifiesto-item {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.manifiesto-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffcc00, #e6b800);
+  transition: width 0.3s ease;
+}
+
+.manifiesto-item:hover {
+  background: rgba(255, 204, 0, 0.1);
+  border-color: #ffcc00;
+  transform: translateY(-3px);
+}
+
+.manifiesto-item:hover::before {
+  width: 8px;
+}
+
+.manifiesto-item h3 {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.manifiesto-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.manifiesto-item p strong {
   color: #fff;
-  width: 50%;
-}
-.mision-section p{
- text-align: left;
-}
-.content-block{
-  text-align: left;
-  width: 50%;
+  font-weight: 700;
 }
 
-
-
-/* manifestacion */
-.manifiesto-section{
-  text-align: left;
-}
-.manifiesto-grid{
-
-}
-
-.manifiesto-item{
- text-align: left;
- width: 50%;
- padding: 10px 0px  10px 0px;
-}
-/*Carrusel de imagenes de equipo de trabajo y lugra de trabajo*/
-.equipo-section {
+/* === CARRUSELES === */
+.equipo-section,
+.espacio-section {
+  margin-bottom: 60px;
   text-align: center;
-  margin: 50px auto;
 }
 
-.equipo-section {
-    text-align: center;
-    margin: 50px auto;
+.equipo-section h2,
+.espacio-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 8px;
+  color: #fff;
+}
+
+.carousel-container {
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 204, 0, 0.3);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 30px 25px 20px 25px;
+  text-align: left;
+}
+
+.carousel-caption h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.carousel-caption p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.carousel-btn {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 204, 0, 0.5);
+  color: #ffcc00;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 204, 0, 0.9);
+  color: #000;
+  border-color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* === RESPONSIVE PARA PÁGINA NOSOTROS === */
+@media (max-width: 768px) {
+  .nosotros-container {
+    padding: 0 15px;
+  }
+
+  .intro-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .vision-mision-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .vision-section,
+  .mision-section {
+    padding: 20px;
+  }
+
+  .vision-section h2,
+  .mision-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .content-block h3 {
+    font-size: 1.1rem;
+  }
+
+  .content-block p {
+    font-size: 0.9rem;
+  }
+
+  .manifiesto-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .manifiesto-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .manifiesto-item {
+    padding: 20px;
+  }
+
+  .manifiesto-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .manifiesto-item p {
+    font-size: 0.9rem;
   }
 
   .carousel-container {
-    position: relative;
-    width: 50%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carousel-slide {
-    min-width: 100%;
-    position: relative;
+    width: 95%;
   }
 
   .carousel-slide img {
-    width: 100%;
-    height: 400px; /* ✅ Altura fija */
-    object-fit: cover; /* ✅ Mantiene proporción sin deformar */
-    border-radius: 15px;
-    display: block;
+    height: 300px;
   }
 
   .carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.6);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    max-width: 80%;
+    padding: 20px 15px 15px 15px;
   }
 
-  .carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+  .carousel-caption h4 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.85rem;
   }
 
   .carousel-btn {
-   background: rgba(0,0,0,0.6);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background 0.3s;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content h2 {
+    font-size: 1.4rem;
   }
 
-  .carousel-btn:hover {
-    background: rgba(0,0,0,0.9);
+  .manifiesto-section h2 {
+    font-size: 1.4rem;
   }
+
+  .vision-section h2,
+  .mision-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-slide img {
+    height: 250px;
+  }
+
+  .manifiesto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nosotros-container {
+    max-width: 1400px;
+  }
+
+  .vision-mision-container {
+    gap: 60px;
+  }
+
+  .manifiesto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

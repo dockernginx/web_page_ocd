@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Nuestra Empresa</title>
+  <link rel="stylesheet" href="../../css/empresa.css">
+</head>
+<body>
+  <!-- Fondo -->
+  <div class="background"></div>
+
+ <!-- Menú superior -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../../index.html">
+          <img src="../../img/logo.png" alt="Proyecto OCD" class="logo">
+        </a>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <div class="nav-item">
+          <a href="../empresa.html" class="nav-link">Proyectos</a>
+        </div>
+        <div class="nav-item">
+          <a href="../empresa/apariciones.html" class="nav-link">Apariciones</a>
+        </div>
+        <div class="nav-item">
+          <a href="servicios.html" class="nav-link">Servicios</a>
+        </div>
+        <div class="nav-item">
+          <a href="../empresa/nosotros.html" class="nav-link active">Nosotros</a>
+        </div>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1>Nuestros Servicios</h1>
+    <div class="three-column-layout">
+      <!-- Columna 1 -->
+      <div class="column">
+        <section>
+          <h2>Diseño Arquitectónico</h2>
+          <div class="items-grid">
+            <div class="item">
+              <h4>Proyectos Residenciales</h4>
+              <p>Diseños personalizados para casas, departamentos y residencias modernas.</p>
+            </div>
+            <div class="item">
+              <h4>Proyectos Comerciales</h4>
+              <p>Soluciones arquitectónicas para oficinas, tiendas y espacios de negocio.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="column">
+        <section>
+          <h2>Construcción</h2>
+          <div class="items-grid">
+            <div class="item">
+              <h4>Supervisión de Obra</h4>
+              <p>Aseguramos la calidad y cumplimiento en todas las fases de construcción.</p>
+            </div>
+            <div class="item">
+              <h4>Gestión de Proyectos</h4>
+              <p>Administración integral desde la planeación hasta la entrega final.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna 3 -->
+      <div class="column">
+        <section>
+          <h2>Consultoría</h2>
+          <div class="items-grid">
+            <div class="item">
+              <h4>Asesoría Técnica</h4>
+              <p>Consultoría en materiales, normativas y procesos constructivos.</p>
+            </div>
+            <div class="item">
+              <h4>Diseño Sustentable</h4>
+              <p>Propuestas enfocadas en eficiencia energética y cuidado del medio ambiente.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nuestra Empresa - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script menú responsive -->
+  <script>
+     let equipoIndex = 0;
+
+  function changeSlide(id, direction) {
+    const carousel = document.getElementById(id + '-carousel');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    equipoIndex = (equipoIndex + direction + slides.length) % slides.length;
+    carousel.style.transform = `translateX(-${equipoIndex * 100}%)`;
+  }
+    const images = [
+      "../../img/fondo1.jpg",
+      "../../img/fondo2.jpg",
+      "../../img/fondo3.jpg",
+      "../../img/fondo4.jpg",
+      "../../img/fondo5.jpg",
+      "../../img/fondo6.jpg",
+      "../../img/fondo7.jpg",
+      "../../img/fondo8.jpg",
+      "../../img/fondo9.jpg",
+      "../../img/fondo10.jpg"
+    ];
+
+    const background = document.querySelector(".background");
+
+    function setRandomBackground() {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      background.style.backgroundImage = `url(${images[randomIndex]})`;
+    }
+
+    setRandomBackground();
+
+    // Carrusel functionality
+    let currentSlides = {
+      equipo: 0,
+      espacio: 0
+    };
+
+    function changeSlide(carousel, direction) {
+      const carouselElement = document.getElementById(`${carousel}-carousel`);
+      const slides = carouselElement.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+      
+      currentSlides[carousel] += direction;
+      
+      if (currentSlides[carousel] >= totalSlides) {
+        currentSlides[carousel] = 0;
+      } else if (currentSlides[carousel] < 0) {
+        currentSlides[carousel] = totalSlides - 1;
+      }
+      
+      const translateX = -currentSlides[carousel] * 100;
+      carouselElement.style.transform = `translateX(${translateX}%)`;
+    }
+
+    // Auto-play carousels (optional)
+    setInterval(() => {
+      changeSlide('equipo', 1);
+    }, 5000);
+
+    setInterval(() => {
+      changeSlide('espacio', 1);
+    }, 6000);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+          hamburger.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
