@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apariciones - Proyecto OCD</title>
   <link rel="stylesheet" href="../css/empresa.css" />
+  <!-- Incluir el script del carrusel -->
+  <script src="../js/carousel.js" defer></script>
 </head>
 <body>
   <!-- Fondo -->
@@ -26,13 +28,10 @@
           <a href="../pages/empresa/apariciones.html" class="nav-link">Apariciones</a>
         </div>
         <div class="nav-item">
-          <a href="../pages/empresa/servicios.html" class="nav-link">Servicios</a>
+          <a href="#publicaciones" class="nav-link">Servicios</a>
         </div>
         <div class="nav-item">
           <a href="../pages/empresa/nosotros.html" class="nav-link">Nosotrós</a>
-        </div>
-         <div class="nav-item">
-          <a href="../pages/empresa/contacto.html" class="nav-link">Contacto</a>
         </div>
       </nav>
       <div class="hamburger" id="hamburger">
@@ -58,17 +57,62 @@
           <article>
             <h3>En Progreso</h3>
             <div class="items-grid">
-              <div class="item">
-                <h4><link/>Brooklyn</h4>
+              <div class="item" data-project="brooklyn">
+                <h4>Brooklyn</h4>
+                <a href="#" class="more-info-link" onclick="openModal('brooklyn')">Más información</a>
+                
+                <!-- Carrusel hover -->
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="brooklyn-hover">
+                      <!-- Las imágenes se cargan desde el script -->
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('brooklyn-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('brooklyn-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="pompidou">
                 <h4>Centre Pompidou 2030</h4>
+                <a href="#" class="more-info-link" onclick="openModal('pompidou')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="pompidou-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('pompidou-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('pompidou-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="tang">
                 <h4>Oscar L. Tang and H.M. Agnes Hsu-Tang Wing</h4>
+                <a href="#" class="more-info-link" onclick="openModal('tang')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="tang-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('tang-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('tang-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="ray">
                 <h4>Ray Harlem</h4>
+                <a href="#" class="more-info-link" onclick="openModal('ray')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="ray-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('ray-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('ray-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -76,49 +120,124 @@
           <article>
             <h3>Terminados</h3>
             <div class="items-grid">
-              <div class="item">
+              <div class="item" data-project="library">
                 <span class="year">2024</span>
                 <h4>A Library as Big as a World</h4>
+                <a href="#" class="more-info-link" onclick="openModal('library')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="library-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('library-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('library-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="cartier">
                 <span class="year">2023</span>
                 <h4>Cartier Design: A Living Legacy</h4>
+                <a href="#" class="more-info-link" onclick="openModal('cartier')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="cartier-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('cartier-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('cartier-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="boca">
                 <span class="year">2023</span>
                 <h4>Boca de Agua</h4>
+                <a href="#" class="more-info-link" onclick="openModal('boca')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="boca-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('boca-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('boca-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="galerie">
                 <span class="year">2022</span>
                 <h4>Galerie Nordenhake Mexico</h4>
+                <a href="#" class="more-info-link" onclick="openModal('galerie')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="galerie-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('galerie-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('galerie-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="fabricated">
                 <span class="year">2021</span>
                 <h4>The Fabricated Landscape</h4>
+                <a href="#" class="more-info-link" onclick="openModal('fabricated')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="fabricated-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('fabricated-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('fabricated-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="niddo">
                 <span class="year">2020</span>
                 <h4>Niddo Café</h4>
+                <a href="#" class="more-info-link" onclick="openModal('niddo')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="niddo-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('niddo-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('niddo-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
-                <span class="year">2019</span>
-                <h4>El Otro - Franz Mayer Museum</h4>
-              </div>
-              <div class="item">
-                <span class="year">2019</span>
-                <h4>Lina Bo Bardi: Habitat</h4>
-              </div>
-              <div class="item">
-                <span class="year">2019</span>
-                <h4>Exhibit Columbus</h4>
-              </div>
-              <div class="item">
+
+              <div class="item" data-project="aesop">
                 <span class="year">2018</span>
                 <h4>Aesop Park Slope</h4>
+                <a href="#" class="more-info-link" onclick="openModal('aesop')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="aesop-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('aesop-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('aesop-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
-              <div class="item">
+
+              <div class="item" data-project="casajulia">
                 <span class="year">2018</span>
                 <h4>Casa Julia</h4>
+                <a href="#" class="more-info-link" onclick="openModal('casajulia')">Más información</a>
+                
+                <div class="hover-carousel-overlay">
+                  <div class="hover-carousel-container">
+                    <div class="hover-carousel" data-carousel="casajulia-hover">
+                    </div>
+                    <button class="hover-carousel-btn prev" onclick="carouselManager.prev('casajulia-hover')">&lt;</button>
+                    <button class="hover-carousel-btn next" onclick="carouselManager.next('casajulia-hover')">&gt;</button>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -130,50 +249,147 @@
         <section id="objetos">
           <h2>Objetos</h2>
           <div class="items-grid">
-            <div class="item">
+            <div class="item" data-project="cube01">
               <span class="year">2025</span>
               <h4>Cube 01</h4>
+              <a href="#" class="more-info-link" onclick="openModal('cube01')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="cube01-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('cube01-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('cube01-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
-            <div class="item">
+
+            <div class="item" data-project="creekbench">
               <span class="year">2022</span>
               <h4>Creek Bench</h4>
+              <a href="#" class="more-info-link" onclick="openModal('creekbench')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="creekbench-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('creekbench-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('creekbench-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
-            <div class="item">
+
+            <div class="item" data-project="creekchair">
               <span class="year">2022</span>
               <h4>Creek Chair</h4>
+              <a href="#" class="more-info-link" onclick="openModal('creekchair')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="creekchair-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('creekchair-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('creekchair-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
-            <div class="item">
+
+            <div class="item" data-project="screen01">
               <span class="year">2019</span>
               <h4>Screen 01</h4>
+              <a href="#" class="more-info-link" onclick="openModal('screen01')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="screen01-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('screen01-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('screen01-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
-            <div class="item">
+
+            <div class="item" data-project="chair01">
               <span class="year">2015</span>
               <h4>Chair 01</h4>
+              <a href="#" class="more-info-link" onclick="openModal('chair01')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="chair01-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('chair01-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('chair01-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
 
-      <!-- COLUMNA DERECHA: PUBLICACIONES Y APARICIONES -->
+      <!-- COLUMNA DERECHA: PUBLICACIONES -->
       <div class="column right-column">
         <section id="publicaciones">
           <h2>Publicaciones</h2>
           <div class="items-grid">
-            <div class="item">
+            <div class="item" data-project="bookhours">
               <span class="year">2023</span>
               <h4>The Book of Hours</h4>
+              <a href="#" class="more-info-link" onclick="openModal('bookhours')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="bookhours-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('bookhours-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('bookhours-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
-            <div class="item">
+
+            <div class="item" data-project="domestic">
               <span class="year">2019</span>
               <h4>Domestic Orbits</h4>
+              <a href="#" class="more-info-link" onclick="openModal('domestic')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="domestic-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('domestic-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('domestic-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
-            <div class="item">
+
+            <div class="item" data-project="serpentine">
               <span class="year">2018</span>
               <h4>OCD: Serpentine Pavilion 2018</h4>
+              <a href="#" class="more-info-link" onclick="openModal('serpentine')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="serpentine-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('serpentine-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('serpentine-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
-            <div class="item">
+
+            <div class="item" data-project="tallera">
               <span class="year">2014</span>
               <h4>La Tallera Siqueiros. OCD</h4>
+              <a href="#" class="more-info-link" onclick="openModal('tallera')">Más información</a>
+              
+              <div class="hover-carousel-overlay">
+                <div class="hover-carousel-container">
+                  <div class="hover-carousel" data-carousel="tallera-hover">
+                  </div>
+                  <button class="hover-carousel-btn prev" onclick="carouselManager.prev('tallera-hover')">&lt;</button>
+                  <button class="hover-carousel-btn next" onclick="carouselManager.next('tallera-hover')">&gt;</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -181,12 +397,70 @@
     </div>
   </main>
 
+  <!-- Modal -->
+  <div id="projectModal" class="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      
+      <div class="modal-left">
+        <h3 id="modal-title">Título del Proyecto</h3>
+        <p id="modal-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="#" class="more-info-link">Más información</a>
+      </div>
+      
+      <div class="modal-right">
+        <div class="modal-carousel-container">
+          <div class="modal-carousel" data-carousel="modal">
+            <!-- Las imágenes se cargan dinámicamente -->
+          </div>
+          <button class="modal-carousel-btn prev" onclick="carouselManager.prev('modal')">&lt;</button>
+          <button class="modal-carousel-btn next" onclick="carouselManager.next('modal')">&gt;</button>
+        </div>
+        <div class="modal-indicators" id="modal-indicators">
+          <!-- Los indicadores se crean dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div>© 2025 Proyecto OCD. Todos los derechos reservados.</div>
   </footer>
 
   <script>
-    // Imágenes para el fondo rotativo
+    // Función para abrir modal
+    function openModal(projectId) {
+      const modal = document.getElementById('projectModal');
+      const title = document.getElementById('modal-title');
+      
+      // Obtener el título del proyecto desde el elemento HTML
+      const projectElement = document.querySelector(`[data-project="${projectId}"] h4`);
+      if (projectElement) {
+        title.textContent = projectElement.textContent;
+      }
+      
+      // Configurar carrusel del modal con las mismas imágenes del hover
+      const hoverCarouselId = projectId + '-hover';
+      carouselManager.setupModalCarousel('modal', hoverCarouselId);
+      
+      modal.style.display = 'flex';
+    }
+
+    // Función para cerrar modal
+    function closeModal() {
+      document.getElementById('projectModal').style.display = 'none';
+    }
+
+    // Cerrar modal al hacer clic fuera del contenido
+    document.getElementById('projectModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Imágenes para el fondo rotativo (del script original)
     const images = [
       "../img/fondo1.jpg",
       "../img/fondo2.jpg",
@@ -211,10 +485,7 @@
     // Establecer fondo inicial
     setRandomBackground();
 
-    // Cambiar fondo cada 10 segundos (opcional)
-    // setInterval(setRandomBackground, 10000);
-
-    // Script para el menú hamburguesa y navegación suave
+    // Script para el menú hamburguesa y navegación suave (del script original)
     document.addEventListener('DOMContentLoaded', function() {
       const hamburger = document.getElementById('hamburger');
       const navMenu = document.getElementById('nav-menu');
